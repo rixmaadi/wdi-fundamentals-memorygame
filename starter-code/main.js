@@ -4,7 +4,17 @@ var cardTwo = "queen";
 var cardThree = "king";
 var cardFour = "king";
 
-if (cardOne === cardTwo)
+var arena = document.getElementById('game-board');
+
+
+function createBoard()
 {
-	alert("You found a match!");
+	for (var i = 0; i < 4; i++)
+	{
+		var newCard = document.createElement('div');
+		newCard.className = "card";
+		arena.addElement(newCard);
+	}
 }
+
+createBoard();
